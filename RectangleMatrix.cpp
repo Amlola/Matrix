@@ -13,7 +13,6 @@ void PrintMatrix2(double* matrix, FILE* file, size_t y_1, size_t x_1)
             }
         fprintf(file, "\n");
         }
-    fprintf(file, "\n");
     }
 
 
@@ -25,7 +24,7 @@ void Multi_Matrix(double* matrix, double* matrix2, double* multi_matrix, size_t 
         {
         for (size_t x = 0; x < x_2; x++)
             {
-            multi_matrix[y * x_2 + x] = One_operation(y, x, matrix, matrix2, x_1, x_2);
+            *(multi_matrix + y * x_2 + x) = One_operation(y, x, matrix, matrix2, x_1, x_2);
             }
         }
     }
@@ -36,9 +35,11 @@ double One_operation(int y_pos, int x_pos, double* matrix, double* matrix2, size
     assert(matrix && matrix2);
 
     double sol = 0;
+
     for (int i = 0; i < x_1; i++)
         {
-        sol += matrix[y_pos * x_1 + i] * matrix2[i * x_2 + x_pos];
+
+        sol += *(matrix + y_pos * x_1 + i) * *(matrix2 + i * x_2 + x_pos);
         }
     return sol;
     }

@@ -77,11 +77,26 @@ void InputTriangleMatrix(int matrix_triangle[], size_t size1);
 int ChooseMatrix();
 
 
-//void Sort(size_t y, size_t x);
-
-
 void InputRectangleMatrix(double* matrix_rectangle, size_t y_max, size_t x_max);
 
 
 double* GetSetMatrixRectangle(double* matrix_rectangle, size_t y, size_t x, size_t x_max);
+
+
+void Check_multi(int x_1, int x_2, int y_2);
+
+
+void Input_size_Rectanglematrix(int* y_1, int* x_1);
+
+
+void Input_size_Rectanglematrix2(int* x_2, int* y_2);
+
+
+void Input_size_Triangularmatrix(int* size3);
+
+
+
+
+
+
 

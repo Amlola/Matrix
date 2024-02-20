@@ -16,7 +16,6 @@ void PrintTriangleMatrix(const int matrix_triangle[], size_t size1, FILE* file)
             }
         fprintf(file, "\n");
         }
-    fprintf(file, "\n");
     }
 
 
@@ -25,14 +24,3 @@ int GetMatrixTriangle(const int matrix_triangle[], size_t y, size_t x)
     return *(matrix_triangle + (1 + y) * y / 2 + x);
     }
 
-
-/*void Sort(size_t y, size_t x)
-    {
-    if (x > y)
-        {
-        size_t tmp = 0;
-        tmp = x;
-        x = y;
-        y = tmp;
-        }
-    }*/
